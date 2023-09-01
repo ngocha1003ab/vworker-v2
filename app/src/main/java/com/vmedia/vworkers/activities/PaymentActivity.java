@@ -173,15 +173,9 @@ public class PaymentActivity extends AppCompatActivity implements PurchasesUpdat
                     break;
 
                 case "google_pay":
-//                    billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
-//                    google_key=jsonArray.getJSONObject(0).getString("value");
-//                    BillingAssign();
-
-                    // ADD CODE TO CHECKING
-                    orderID=pref.User_id()+UUID.randomUUID().toString();
-                    //model_id="";
-                    payment_status="completed";
-                    verifyPay();
+                    billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
+                    google_key=jsonArray.getJSONObject(0).getString("value");
+                    BillingAssign();
                     break;
 
                 case "qr":
