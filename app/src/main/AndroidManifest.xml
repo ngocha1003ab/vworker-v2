@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.vmedia.vworkers">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" />
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE"
+        tools:ignore="ScopedStorage" />
+    <uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+
+    <application
+        android:name="com.vmedia.vworkers.App"
+        android:allowBackup="true"
+        android:configChanges="keyboardHidden|orientation|screenSize"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/domain_whitelist"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.AppTheme"
+        android:usesCleartextTraffic="true"
+        tools:replace="android:networkSecurityConfig,android:supportsRtl"
+        tools:targetApi="33">
+
+        <activity
+            android:name="com.vmedia.vworkers.activities.ProfileActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.LoginMainActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+                <data android:scheme="https" />
+                <data android:host="play.google.com/store/apps/details?id=com.vmedia.vworkers" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.vmedia.vworkers.activities.CompleteDailyOfferActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.CollectRewardActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.ViewCpiOffer"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.LanguageActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.DailybonusActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.SettingActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.OfferwallActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:exported="false" />
+
+
+        <activity
+            android:name="com.vmedia.vworkers.activities.PlayTime"
+            android:exported="false"
+            android:label="@string/title_activity_play_time"
+            android:theme="@style/Theme.AppTheme" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.BrowseActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.OfflinePayment"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.OnboardingActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.ReferralHistory"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.CustomGame"
+            android:exported="false"
+            android:label="@string/title_activity_custom_game"
+            android:theme="@style/Theme.AppTheme" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.SubscriptionActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.VideoWall"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.support.SupportActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.PaymentActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.NotificationActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.O_Pollfish"
+            android:exported="false" />
+
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.InBrainOfr"
+            android:exported="false" />
+
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.O_AdjoeOfr"
+            android:exported="false" />
+
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.O_AdGateMedia"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.DailyOffer"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.MathQuiz"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.Leaderboard"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.History"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.VideoActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.VisitActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.ArticleActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.ScratchActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.SpinActivity"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.StoreList"
+            android:exported="false" />
+
+        <meta-data
+            android:name="com.startapp.sdk.RETURN_ADS_ENABLED"
+            android:value="false" />
+
+        <activity
+            android:name="com.vmedia.vworkers.activities.PromoWeb"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.CreatePromo"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.PromoVideo"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.Promote"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.FaqActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.Games"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.ForgotPassword"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.Splash"
+            android:configChanges="orientation|screenSize"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="applovin.sdk.key"
+            android:value="@string/APPLOVIN_SDK_KEY" />
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="@string/ADMOB_APPID" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <activity
+            android:name="com.vmedia.vworkers.activities.MainActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.FrontLogin"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.FrontSignup"
+            android:exported="false"
+            android:launchMode="singleTask" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.Rewards"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.activities.AboutusActivity"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+
+        <uses-library
+            android:name="org.apache.http.legacy"
+            android:required="false" />
+
+        <meta-data
+            android:name="com.onesignal.NotificationServiceExtension"
+            android:value="com.onesignal.example.NotificationServiceExtension" /> <!-- <meta-data -->
+        <activity
+            android:name="com.tapjoy.TJAdUnitActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.tapjoy.TJContentActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="false"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.Ironsources"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.O_Tapjoys"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.vmedia.vworkers.offerwall.O_Offertoro"
+            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+            android:exported="false" />
+        <activity
+            android:name="com.ironsource.sdk.controller.ControllerActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.ironsource.sdk.controller.OpenUrlActivity"
+            android:configChanges="orientation|screenSize"
+            android:exported="false"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Translucent" />
+        <activity
+            android:name="com.adcolony.sdk.AdColonyInterstitialActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+        <activity
+            android:name="com.adcolony.sdk.AdColonyAdViewActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:hardwareAccelerated="true"
+            android:theme="@android:style/Theme.Black.NoTitleBar.Fullscreen" />
+
+        <receiver
+            android:name="com.offertoro.sdk.sdk.OfferToroReceiver"
+            android:exported="false" />
+
+        <provider
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+            android:authorities="${applicationId}.IronsourceLifecycleProvider" />
+
+        <activity
+            android:name="com.google.android.gms.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize" />
+
+        <provider
+            android:name="com.ironsource.lifecycle.IronsourceLifecycleProvider"
+            android:authorities="${applicationId}.IronsourceLifecycleProvider" />
+    </application>
+
+</manifest>
